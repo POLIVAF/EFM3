@@ -14,7 +14,7 @@
   </head>
   <body class="bg-light">
     <!-- Encabezado -->
-    <header class="bg-white shadow-sm py-4 mb-4"></header>
+    <header class="bg-white shadow-sm py-4 mb-4">
       <h1 class="text-center fw-bold">Buscador de Recetas</h1>
 
       <nav>
@@ -32,11 +32,11 @@
               <div class="mb-3">
                 <label for="buscar receta" class="form-label">Buscar Receta</label>
                 <input type="text"
-                class="from-control"
+                class="form-control"
                 placeholder="Buscar por ingrediente"/>
               </div>
               <!-- Botón -->
-              <button type="button" class="btn btn-primary w-100">>
+              <button type="button" class="btn btn-primary w-100">
                 Buscar
               </button>
             </form>
@@ -44,80 +44,190 @@
         </div>
       </div>
       
-      <!-- Sección de resultados -->
+      <!-- Sección de recetas -->
+<!-- Sección de recetas -->
 <section class="container mt-5">
-    <h2 class="text-center mb-4">Recetas de Ejemplo</h2>
+    <h2 class="text-center mb-4">Recetas</h2>
 
-    <div class="row g-4">
+    <!-- ===================== F I L A   1 ===================== -->
+    <div class="row g-4" id="fila1">
 
-        <!-- Tarjeta 1 -->
-        <div class="col-md-4">
-            <div class="card shadow-sm">
-                <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Receta 1">
+        <!-- TARJETA 1 -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card shadow-sm h-100">
+                <img src="https://www.everydayeasyeats.com/wp-content/uploads/2016/06/Cherry-Tomato-Cucumber-Spinach-Salad-1.jpg" class="card-img-top" alt="Receta 1">
+
                 <div class="card-body">
                     <h5 class="card-title">Ensalada Fresca</h5>
-                    <a href="#" class="btn btn-primary w-100">Ver receta</a>
+                    <a class="btn btn-primary w-100"
+                       data-bs-toggle="collapse"
+                       data-bs-target="#receta1">
+                       Ver receta
+                    </a>
+                </div>
+
+                <div class="collapse mt-3 p-3" id="receta1" data-bs-parent="#fila1">
+                    <p><strong>Ingredientes:</strong></p>
+                    <ul>
+                        <li>Lechuga</li>
+                        <li>Tomate</li>
+                        <li>Pepino</li>
+                    </ul>
+                    <p><strong>Preparación:</strong></p>
+                    <p>Mezcla los ingredientes y aliña.</p>
                 </div>
             </div>
         </div>
 
-        <!-- Tarjeta 2 -->
-        <div class="col-md-4">
-            <div class="card shadow-sm">
-                <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Receta 2">
+        <!-- TARJETA 2 -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card shadow-sm h-100">
+                <img src="https://richanddelish.com/wp-content/uploads/2023/02/creamy-pesto-pasta-5-of-15.jpg" class="card-img-top" alt="Receta 2">
+
                 <div class="card-body">
-                    <h5 class="card-title">Pasta con Tomate</h5>
-                    <a href="#" class="btn btn-primary w-100">Ver receta</a>
+                    <h5 class="card-title">Pasta al Pesto</h5>
+                    <a class="btn btn-primary w-100"
+                       data-bs-toggle="collapse"
+                       data-bs-target="#receta2">
+                       Ver receta
+                    </a>
+                </div>
+
+                <div class="collapse mt-3 p-3" id="receta2" data-bs-parent="#fila1">
+                    <p><strong>Ingredientes:</strong></p>
+                    <ul>
+                        <li>Fideos</li>
+                        <li>Albahaca</li>
+                        <li>Ajo</li>
+                        <li>Parmesano</li>
+                    </ul>
+                    <p><strong>Preparación:</strong></p>
+                    <p>Mezcla la pasta con el pesto recién preparado.</p>
                 </div>
             </div>
         </div>
 
-        <!-- Tarjeta 3 -->
-        <div class="col-md-4">
-            <div class="card shadow-sm">
-                <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Receta 3">
+        <!-- TARJETA 3 -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card shadow-sm h-100">
+                <img src="https://www.budgetbytes.com/wp-content/uploads/2024/06/Grilled-Chicken-V1.jpeg" class="card-img-top" alt="Receta 3">
+
                 <div class="card-body">
                     <h5 class="card-title">Pollo a la Plancha</h5>
-                    <a href="#" class="btn btn-primary w-100">Ver receta</a>
+                    <a class="btn btn-primary w-100"
+                       data-bs-toggle="collapse"
+                       data-bs-target="#receta3">
+                       Ver receta
+                    </a>
+                </div>
+
+                <div class="collapse mt-3 p-3" id="receta3" data-bs-parent="#fila1">
+                    <p><strong>Ingredientes:</strong></p>
+                    <ul>
+                        <li>Pechuga de pollo</li>
+                        <li>Sal</li>
+                        <li>Pimienta</li>
+                        <li>Limón</li>
+                    </ul>
+                    <p><strong>Preparación:</strong></p>
+                    <p>Cocina el pollo 5 minutos por lado.</p>
                 </div>
             </div>
         </div>
 
-         <!-- Tarjeta 4 -->
-        <div class="col-md-4">
-            <div class="card shadow-sm">
-                <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Receta 3">
+    </div> <!-- Fin fila 1 -->
+
+    <!-- ===================== F I L A   2 ===================== -->
+    <div class="row g-4 mt-4" id="fila2">
+
+        <!-- TARJETA 4 -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card shadow-sm h-100">
+                <img src="https://www.thereciperebel.com/wp-content/uploads/2019/01/instant-pot-vegetable-soup-www.thereciperebel.com-1200-3-of-3.jpg" class="card-img-top" alt="Receta 4">
+
                 <div class="card-body">
-                    <h5 class="card-title">Pollo a la Plancha</h5>
-                    <a href="#" class="btn btn-primary w-100">Ver receta</a>
+                    <h5 class="card-title">Sopa de Verduras</h5>
+                    <a class="btn btn-primary w-100"
+                       data-bs-toggle="collapse"
+                       data-bs-target="#receta4">
+                       Ver receta
+                    </a>
+                </div>
+
+                <div class="collapse mt-3 p-3" id="receta4" data-bs-parent="#fila2">
+                    <p><strong>Ingredientes:</strong></p>
+                    <ul>
+                        <li>Zanahoria</li>
+                        <li>Papa</li>
+                        <li>Apio</li>
+                        <li>Caldo</li>
+                    </ul>
+                    <p><strong>Preparación:</strong></p>
+                    <p>Hierve todo 20 minutos.</p>
                 </div>
             </div>
         </div>
 
-         <!-- Tarjeta 5 -->
-        <div class="col-md-4">
-            <div class="card shadow-sm">
-                <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Receta 3">
+        <!-- TARJETA 5 -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card shadow-sm h-100">
+                <img src="https://damndelicious.net/wp-content/uploads/2019/04/Mexican-Street-TacosIMG_9108-1.jpg" class="card-img-top" alt="Receta 5">
+
                 <div class="card-body">
-                    <h5 class="card-title">Pollo a la Plancha</h5>
-                    <a href="#" class="btn btn-primary w-100">Ver receta</a>
+                    <h5 class="card-title">Tacos de Carne</h5>
+                    <a class="btn btn-primary w-100"
+                       data-bs-toggle="collapse"
+                       data-bs-target="#receta5">
+                       Ver receta
+                    </a>
+                </div>
+
+                <div class="collapse mt-3 p-3" id="receta5" data-bs-parent="#fila2">
+                    <p><strong>Ingredientes:</strong></p>
+                    <ul>
+                        <li>Tortillas</li>
+                        <li>Carne</li>
+                        <li>Queso</li>
+                        <li>Tomate</li>
+                    </ul>
+                    <p><strong>Preparación:</strong></p>
+                    <p>Armar y servir caliente.</p>
                 </div>
             </div>
         </div>
 
-         <!-- Tarjeta 6 -->
-        <div class="col-md-4">
-            <div class="card shadow-sm">
-                <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Receta 3">
+        <!-- TARJETA 6 -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card shadow-sm h-100">
+                <img src="https://www.recipetineats.com/tachyon/2020/03/Brownies_0-SQ.jpg" class="card-img-top" alt="Receta 6">
+
                 <div class="card-body">
-                    <h5 class="card-title">Pollo a la Plancha</h5>
-                    <a href="#" class="btn btn-primary w-100">Ver receta</a>
+                    <h5 class="card-title">Brownies</h5>
+                    <a class="btn btn-primary w-100"
+                       data-bs-toggle="collapse"
+                       data-bs-target="#receta6">
+                       Ver receta
+                    </a>
+                </div>
+
+                <div class="collapse mt-3 p-3" id="receta6" data-bs-parent="#fila2">
+                    <p><strong>Ingredientes:</strong></p>
+                    <ul>
+                        <li>Chocolate</li>
+                        <li>Harina</li>
+                        <li>Mantequilla</li>
+                        <li>Azúcar</li>
+                    </ul>
+                    <p><strong>Preparación:</strong></p>
+                    <p>Hornear 25 minutos.</p>
                 </div>
             </div>
         </div>
 
-    </div>
+    </div> <!-- Fin fila 2 -->
+
 </section>
+
 
     </main>
 
