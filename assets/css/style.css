@@ -1,0 +1,6 @@
+.img-card {
+    height: 200px;          /* Todas tendrán la misma altura */
+    object-fit: cover;      /* Recorta sin deformar */
+    width: 100%;            /* Se ajusta al ancho de la card */
+    border-radius: 8px 8px 0 0; /* Mantiene bordes bonitos */
+}
