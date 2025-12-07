@@ -1,39 +1,38 @@
 .img-card {
-    height: 200px;          /* Todas tendrán la misma altura */
-    object-fit: cover;      /* Recorta sin deformar */
-    width: 100%;            /* Se ajusta al ancho de la card */
-    border-radius: 8px 8px 0 0; /* Mantiene bordes bonitos */
+  height: 200px; /* Todas tendrán la misma altura */
+  object-fit: cover; /* Recorta sin deformar */
+  width: 100%; /* Se ajusta al ancho de la card */
+  border-radius: 8px 8px 0 0; /* Mantiene bordes bonitos */
 }
 
 /* Fondo general con imagen */
 body {
-    background-image: url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    position: relative;
+  background-image: url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
 }
 
 /* Capa transparente con degradado */
 body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 
-    /* Degradado desde transparente a blanco */
-    background: linear-gradient(
-        rgba(255, 255, 255, 0.2),   /* Transparencia suave arriba */
-        rgba(255, 255, 255, 0.2)    /* Casi blanco abajo */
-    );
+  /* Degradado desde transparente a blanco */
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.2),
+    /* Transparencia suave arriba */ rgba(255, 255, 255, 0.2)
+      /* Casi blanco abajo */
+  );
 
-    z-index: -1;
+  z-index: -1;
 }
-h2 {
-    color: white 
-}
+
 .text-shadow-soft {
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
 }
