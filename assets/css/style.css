@@ -1,10 +1,3 @@
-.img-card {
-  height: 200px; /* Todas tendrán la misma altura */
-  object-fit: cover; /* Recorta sin deformar */
-  width: 100%; /* Se ajusta al ancho de la card */
-  border-radius: 8px 8px 0 0; /* Mantiene bordes bonitos */
-}
-
 /* Fondo general con imagen */
 body {
   background-image: url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format");
@@ -35,4 +28,11 @@ body::before {
 
 .text-shadow-soft {
   text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.img-card {
+  height: 200px; /* Todas tendrán la misma altura */
+  object-fit: cover; /* Recorta sin deformar */
+  width: 100%; /* Se ajusta al ancho de la card */
+  border-radius: 8px 8px 0 0; /* Mantiene bordes bonitos */
 }
