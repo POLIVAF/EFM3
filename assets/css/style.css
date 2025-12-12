@@ -36,3 +36,8 @@ body::before {
   width: 100%; /* Se ajusta al ancho de la card */
   border-radius: 8px 8px 0 0; /* Mantiene bordes bonitos */
 }
+.header-transparente {
+  background: rgba(0, 0, 0, 0.4); /* leve fondo oscuro */
+  backdrop-filter: blur(4px);      /* efecto de vidrio esmerilado */
+}
+
