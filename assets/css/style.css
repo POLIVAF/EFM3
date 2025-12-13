@@ -41,3 +41,8 @@ body::before {
   backdrop-filter: blur(4px);      /* efecto de vidrio esmerilado */
 }
 
+
+.navbar-logo {
+  height: 40px;
+  width: auto;
+}
