@@ -1,310 +1,300 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Buscador de Recetas</title>
-    <!-- Bootstrap CDN --se puede colocar defer></script>, ejecútalo solo cuando todo el HTML esté listo-->  
+
+    <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="./assets/css/style.css">
-
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
+
   <body class="bg-light">
-    <!-- Encabezado -->
+    <!-- ENCABEZADO -->
     <header class="header-transparente py-4 mb-4">
-      <h1 class="text-center fw-bold display-4 text-white text-shadow-soft">Buscador de Recetas</h1>
-      
+      <h1 class="text-center fw-bold display-4 text-white text-shadow-soft">
+        Buscador de Recetas
+      </h1>
     </header>
+
     <main>
-       <!-- FORMULARIO DE BÚSQUEDA -->
-  <form class="container mb-5">
-    <div class="row justify-content-center">
-      <div class="col-12 col-md-8 col-lg-6 d-flex gap-2 bg-light p-3 rounded shadow">
+      <!-- FORMULARIO DE BÚSQUEDA -->
+      <form class="container mb-5">
+        <div class="row justify-content-center">
+          <div
+            class="col-12 col-md-8 col-lg-6 d-flex gap-2 bg-light p-3 rounded shadow"
+          >
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Busca por ingrediente..."
+              aria-label="Buscar receta"
+            />
+            <button type="submit" class="btn btn-primary">Buscar</button>
+          </div>
+        </div>
+      </form>
 
-        <input
-          type="text"
-          class="form-control"
-          placeholder="Busca por ingrediente..."
-          aria-label="Buscar receta"
-        />
-
-        <button type="submit" class="btn btn-primary">
-          Buscar
-        </button>
-
-      </div>
-    </div>
-  </form>
-     <!-- Contenedor principal -->
+      <!-- CONTENEDOR DE RECETAS -->
       <div class="container my-5">
-  <div class="row g-4">
+        <div class="row g-4">
+          <!-- ===== CARD 1 ===== -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="flip-card-container">
+              <input type="checkbox" id="receta1" class="flip-toggle" />
 
-    <!-- ====== CARD 1 ====== -->
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="flip-card-container">
-        <div class="flip-card">
+              <div class="flip-card">
+                <div class="flip-front card shadow">
+                  <img
+                    src="https://www.everydayeasyeats.com/wp-content/uploads/2016/06/Cherry-Tomato-Cucumber-Spinach-Salad-1.jpg"
+                    class="card-img-top img-card"
+                  />
+                  <div class="card-body text-center">
+                    <h4>Ensalada Cesar</h4>
+                    <label for="receta1" class="btn btn-primary">
+                      Ver receta
+                    </label>
+                  </div>
+                </div>
 
-          <!-- FRONT -->
-          <div class="flip-front card shadow">
-            <img src="https://www.everydayeasyeats.com/wp-content/uploads/2016/06/Cherry-Tomato-Cucumber-Spinach-Salad-1.jpg" class="card-img-top" alt="Receta 1">
-            <div class="card-body text-center">
-              <h4 class="card-title">Spaghetti a la Boloñesa</h4>
-              <button class="btn btn-primary flip-btn-front">
-                Ver receta <i class="fa-solid fa-arrow-right-long"></i>
-              </button>
+                <div class="flip-back card shadow p-3">
+                  <h4>Ingredientes</h4>
+                  <ul>
+                    <li>Lechuga</li>
+                    <li>Pollo</li>
+                    <li>Aceite de Oliva extra virgen</li>
+                    <li>Tomates Cherry</li>
+                    <li>Semillas de Maravilla</li>
+                  </ul>
+                  <h4>Preparación</h4>
+                  <p>
+                    prepara la ensalada y agregar cada ingrediente luego,
+                    revolver agregar aceite a gusto ysal.
+                  </p>
+                  <label for="receta1" class="btn btn-secondary">Volver</label>
+                </div>
+              </div>
             </div>
           </div>
 
-          <!-- BACK -->
-          <div class="flip-back card shadow p-3">
-            <h4>Ingredientes</h4>
-            <ul>
-              <li>200g de pasta</li>
-              <li>150g carne molida</li>
-              <li>Salsa de tomate</li>
-              <li>Sal y orégano</li>
-            </ul>
+          <!-- ===== CARD 2 ===== -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="flip-card-container">
+              <input type="checkbox" id="receta2" class="flip-toggle" />
 
-            <h4>Preparación</h4>
-            <p>
-              Cocina la pasta, sofríe la carne, agrega salsa de tomate y condimentos.
-            </p>
+              <div class="flip-card">
+                <div class="flip-front card shadow">
+                  <img
+                    src="https://richanddelish.com/wp-content/uploads/2023/02/creamy-pesto-pasta-5-of-15.jpg"
+                    class="card-img-top img-card"
+                  />
+                  <div class="card-body text-center">
+                    <h4>Pasta al Pesto</h4>
+                    <label for="receta2" class="btn btn-primary"
+                      >Ver receta</label
+                    >
+                  </div>
+                </div>
 
-            <button class="btn btn-secondary flip-btn-back">
-              <i class="fa-solid fa-arrow-left-long"></i> Volver
-            </button>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <!-- ====== CARD 2 ====== -->
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="flip-card-container">
-        <div class="flip-card">
-
-          <!-- FRONT -->
-          <div class="flip-front card shadow">
-            <img src="https://richanddelish.com/wp-content/uploads/2023/02/creamy-pesto-pasta-5-of-15.jpg" class="card-img-top" alt="Receta 2">
-            <div class="card-body text-center">
-              <h4 class="card-title">Ensalada César</h4>
-              <button class="btn btn-primary flip-btn-front">
-                Ver receta <i class="fa-solid fa-arrow-right-long"></i>
-              </button>
+                <div class="flip-back card shadow p-3">
+                  <h4>Ingredientes</h4>
+                  <ul>
+                    <li>Pasta</li>
+                    <li>Diente de ajo</li>
+                    <li>Albahaca fresca, sólo las hojas</li>
+                    <li>Aceite de oliva virgen extra</li>
+                    <li>Sal</li>
+                  </ul>
+                  <h4>Preparación</h4>
+                  <p>
+                    Prepara la pasta primero luego, mezcla todo y agrega
+                    aderezo.
+                  </p>
+                  <label for="receta2" class="btn btn-secondary">Volver</label>
+                </div>
+              </div>
             </div>
           </div>
 
-          <!-- BACK -->
-          <div class="flip-back card shadow p-3">
-            <h4>Ingredientes</h4>
-            <ul>
-              <li>Lechuga</li>
-              <li>Pollo</li>
-              <li>Crutones</li>
-              <li>Aderezo César</li>
-            </ul>
+          <!-- ===== CARD 3 ===== -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="flip-card-container">
+              <input type="checkbox" id="receta3" class="flip-toggle" />
 
-            <h4>Preparación</h4>
-            <p>
-              Mezcla lechuga, pollo, crutones y añade aderezo César.
-            </p>
+              <div class="flip-card">
+                <div class="flip-front card shadow">
+                  <img
+                    src="https://www.guiaderecetas.com/static/images/receta/panqueques-con-manjar.jpg"
+                    class="card-img-top img-card"
+                  />
+                  <div class="card-body text-center">
+                    <h4>Panqueques con Manjar</h4>
+                    <label for="receta3" class="btn btn-primary"
+                      >Ver receta</label
+                    >
+                  </div>
+                </div>
 
-            <button class="btn btn-secondary flip-btn-back">
-              <i class="fa-solid fa-arrow-left-long"></i> Volver
-            </button>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <!-- ====== CARD 3 ====== -->
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="flip-card-container">
-        <div class="flip-card">
-
-          <!-- FRONT -->
-          <div class="flip-front card shadow">
-            <img src="https://www.budgetbytes.com/wp-content/uploads/2024/06/Grilled-Chicken-V1.jpeg" class="card-img-top" alt="Receta 3">
-            <div class="card-body text-center">
-              <h4 class="card-title">Panqueques con Manjar</h4>
-              <button class="btn btn-primary flip-btn-front">
-                Ver receta <i class="fa-solid fa-arrow-right-long"></i>
-              </button>
+                <div class="flip-back card shadow p-3">
+                  <h4>Ingredientes</h4>
+                  <ul>
+                    <li>Harina</li>
+                    <li>Huevos</li>
+                    <li>Leche</li>
+                  </ul>
+                  <h4>Preparación</h4>
+                  <p>Mezcla, cocina y rellena.</p>
+                  <label for="receta3" class="btn btn-secondary">Volver</label>
+                </div>
+              </div>
             </div>
           </div>
 
-          <!-- BACK -->
-          <div class="flip-back card shadow p-3">
-            <h4>Ingredientes</h4>
-            <ul>
-              <li>Harina</li>
-              <li>Huevos</li>
-              <li>Leche</li>
-              <li>Manjar</li>
-            </ul>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="flip-card-container">
+              <input type="checkbox" id="receta4" class="flip-toggle" />
 
-            <h4>Preparación</h4>
-            <p>
-              Mezcla todo, cocina panqueques finos y rellena con manjar.
-            </p>
+              <div class="flip-card">
+                <!-- FRONT -->
+                <div class="flip-front card shadow">
+                  <img
+                    src="https://www.thereciperebel.com/wp-content/uploads/2019/01/instant-pot-vegetable-soup-www.thereciperebel.com-1200-3-of-3.jpg"
+                    class="card-img-top"
+                    alt="Tacos Mexicanos"
+                  />
 
-            <button class="btn btn-secondary flip-btn-back">
-              <i class="fa-solid fa-arrow-left-long"></i> Volver
-            </button>
+                  <div class="card-body text-center">
+                    <h4 class="card-title">Sopa de Vegetales</h4>
 
-          </div>
+                    <label for="receta4" class="btn btn-primary">
+                      Ver receta <i class="fa-solid fa-arrow-right-long"></i>
+                    </label>
+                  </div>
+                </div>
 
-        </div>
-      </div>
-    </div>
+                <!-- BACK -->
+                <div class="flip-back card shadow p-3">
+                  <h4>Ingredientes</h4>
+                  <ul>
+                    <li>Tomates</li>
+                    <li>Cebolla</li>
+                    <li>Ajo</li>
+                    <li>Caldo de verduras</li>
+                  </ul>
 
-    <!-- ====== CARD 4 ====== -->
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="flip-card-container">
-        <div class="flip-card">
+                  <h4>Preparación</h4>
+                  <p>
+                    Cocina los tomates con cebolla y ajo, licúa y añade caldo.
+                  </p>
 
-          <!-- FRONT -->
-          <div class="flip-front card shadow">
-            <img src="https://www.thereciperebel.com/wp-content/uploads/2019/01/instant-pot-vegetable-soup-www.thereciperebel.com-1200-3-of-3.jpg" class="card-img-top" alt="Receta 4">
-            <div class="card-body text-center">
-              <h4 class="card-title">Tacos Mexicanos</h4>
-              <button class="btn btn-primary flip-btn-front">
-                Ver receta <i class="fa-solid fa-arrow-right-long"></i>
-              </button>
+                  <label for="receta4" class="btn btn-secondary">
+                    <i class="fa-solid fa-arrow-left-long"></i> Volver
+                  </label>
+                </div>
+              </div>
             </div>
           </div>
 
-          <!-- BACK -->
-          <div class="flip-back card shadow p-3">
-            <h4>Ingredientes</h4>
-            <ul>
-              <li>Tortillas</li>
-              <li>Carne aliñada</li>
-              <li>Cebolla y cilantro</li>
-              <li>Salsa picante</li>
-            </ul>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="flip-card-container">
+              <input type="checkbox" id="receta5" class="flip-toggle" />
 
-            <h4>Preparación</h4>
-            <p>
-              Rellena las tortillas con carne y agrega cebolla, cilantro y salsa.
-            </p>
+              <div class="flip-card">
+                <!-- FRONT -->
+                <div class="flip-front card shadow">
+                  <img
+                    src="https://damndelicious.net/wp-content/uploads/2019/04/Mexican-Street-TacosIMG_9108-1.jpg"
+                    class="card-img-top"
+                    alt="Sopa de Tomate"
+                  />
 
-            <button class="btn btn-secondary flip-btn-back">
-              <i class="fa-solid fa-arrow-left-long"></i> Volver
-            </button>
+                  <div class="card-body text-center">
+                    <h4 class="card-title">Tacos Mexicanos</h4>
 
-          </div>
+                    <label for="receta5" class="btn btn-primary">
+                      Ver receta <i class="fa-solid fa-arrow-right-long"></i>
+                    </label>
+                  </div>
+                </div>
 
-        </div>
-      </div>
-    </div>
+                <!-- BACK -->
+                <div class="flip-back card shadow p-3">
+                  <h4>Ingredientes</h4>
+                  <ul>
+                    <li>Tortillas</li>
+                    <li>Carne aliñada</li>
+                    <li>Cebolla y cilantro</li>
+                    <li>Salsa picante</li>
+                  </ul>
 
-    <!-- ====== CARD 5 ====== -->
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="flip-card-container">
-        <div class="flip-card">
+                  <h4>Preparación</h4>
+                  <p>
+                    Rellena las tortillas con carne, agrega cebolla, cilantro y
+                    salsa.
+                  </p>
 
-          <!-- FRONT -->
-          <div class="flip-front card shadow">
-            <img src="https://damndelicious.net/wp-content/uploads/2019/04/Mexican-Street-TacosIMG_9108-1.jpg" class="card-img-top" alt="Receta 5">
-            <div class="card-body text-center">
-              <h4 class="card-title">Sopa de Tomate</h4>
-              <button class="btn btn-primary flip-btn-front">
-                Ver receta <i class="fa-solid fa-arrow-right-long"></i>
-              </button>
+                  <label for="receta5" class="btn btn-secondary">
+                    <i class="fa-solid fa-arrow-left-long"></i> Volver
+                  </label>
+                </div>
+              </div>
             </div>
           </div>
 
-          <!-- BACK -->
-          <div class="flip-back card shadow p-3">
-            <h4>Ingredientes</h4>
-            <ul>
-              <li>Tomates</li>
-              <li>Cebolla</li>
-              <li>Ajo</li>
-              <li>Caldo de verduras</li>
-            </ul>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="flip-card-container">
+              <input type="checkbox" id="receta6" class="flip-toggle" />
 
-            <h4>Preparación</h4>
-            <p>
-              Cocina los tomates con cebolla y ajo, luego licúa y agrega caldo.
-            </p>
+              <div class="flip-card">
+                <!-- FRONT -->
+                <div class="flip-front card shadow">
+                  <img
+                    src="https://www.recipetineats.com/tachyon/2020/03/Brownies_0-SQ.jpg"
+                    class="card-img-top"
+                    alt="Lasaña Casera"
+                  />
 
-            <button class="btn btn-secondary flip-btn-back">
-              <i class="fa-solid fa-arrow-left-long"></i> Volver
-            </button>
+                  <div class="card-body text-center">
+                    <h4 class="card-title">Brownies de Chocolate</h4>
 
-          </div>
+                    <label for="receta6" class="btn btn-primary">
+                      Ver receta <i class="fa-solid fa-arrow-right-long"></i>
+                    </label>
+                  </div>
+                </div>
 
-        </div>
-      </div>
-    </div>
+                <!-- BACK -->
+                <div class="flip-back card shadow p-3">
+                  <h4>Ingredientes</h4>
+                  <ul>
+                    <li>200 gramos de chocolate negro</li>
+                    <li>110 gramos de mantequilla</li>
+                    <li>4 huevos</li>
+                    <li>120 gramos de azúcar</li>
+                  </ul>
 
-    <!-- ====== CARD 6 ====== -->
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="flip-card-container">
-        <div class="flip-card">
+                  <h4>Preparación</h4>
+                  <p>
+                    revolver todos los ingredientes, hechar en un bol y cocinar
+                    a 180! grados Celcius por 20 Min.
+                  </p>
 
-          <!-- FRONT -->
-          <div class="flip-front card shadow">
-            <img src="https://www.recipetineats.com/tachyon/2020/03/Brownies_0-SQ.jpg" class="card-img-top" alt="Receta 6">
-            <div class="card-body text-center">
-              <h4 class="card-title">Lasaña Casera</h4>
-              <button class="btn btn-primary flip-btn-front">
-                Ver receta <i class="fa-solid fa-arrow-right-long"></i>
-              </button>
+                  <label for="receta6" class="btn btn-secondary">
+                    <i class="fa-solid fa-arrow-left-long"></i> Volver
+                  </label>
+                </div>
+              </div>
             </div>
           </div>
-
-          <!-- BACK -->
-          <div class="flip-back card shadow p-3">
-            <h4>Ingredientes</h4>
-            <ul>
-              <li>Láminas de lasaña</li>
-              <li>Carne molida</li>
-              <li>Salsa de tomate</li>
-              <li>Queso rallado</li>
-            </ul>
-
-            <h4>Preparación</h4>
-            <p>
-              Alterna capas de salsa, carne, pasta y queso. Lleva al horno.
-            </p>
-
-            <button class="btn btn-secondary flip-btn-back">
-              <i class="fa-solid fa-arrow-left-long"></i> Volver
-            </button>
-
-          </div>
-
         </div>
       </div>
-    </div>
-
-  </div>
-</div>
- <!-- row -->
-</section>
-
-
     </main>
 
-    <footer>
-
-    </footer>
-
-    <!-- Bootstrap JS (opcional) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script src="./assets/js/app.js"></script>
-
   </body>
 </html>
