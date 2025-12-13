@@ -1,4 +1,32 @@
-/* Fondo general con imagen */
+/* --- FLIP CARD --- */
+.flip-card-container {
+  perspective: 1000px;
+}
+
+.flip-card {
+  width: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.7s ease;
+  min-height: 420px;
+}
+
+.flip-card.flipped {
+  transform: rotateY(180deg);
+}
+
+.flip-card .card {
+  position: absolute;
+  width: 100%;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+}
+
+.flip-card .flip-back {
+  transform: rotateY(180deg);
+}
+
+/* --- FONDO GENERAL CON IMAGEN --- */
 body {
   background-image: url("https://i.ibb.co/zVN95G9h/Chat-GPT-Image-11-dic-2025-21-30-27.png");
   background-size: cover;
@@ -7,7 +35,7 @@ body {
   position: relative;
 }
 
-/* Capa transparente con degradado */
+/* --- CAPA TRANSPARENTE DEGRADADA --- */
 body::before {
   content: "";
   position: fixed;
@@ -16,23 +44,24 @@ body::before {
   width: 100%;
   height: 100%;
 
-  /* Degradado desde transparente a blanco */
   background: linear-gradient(
     rgba(255, 255, 255, 0.2),
-    /* Transparencia suave arriba */ rgba(255, 255, 255, 0.2)
-      /* Casi blanco abajo */
+    rgba(255, 255, 255, 0.2)
   );
 
   z-index: -1;
 }
 
+/* --- SOMBRA DE TEXTO --- */
 .text-shadow-soft {
   text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
 }
 
+/* --- AJUSTE UNIVERSAL DE IMÁGENES EN CARDS --- */
+.card-img-top,
 .img-card {
-  height: 200px; /* Todas tendrán la misma altura */
+  height: 200px !important; /* Misma altura en todas */
+  width: 100%; /* Ocupa todo el ancho */
   object-fit: cover; /* Recorta sin deformar */
-  width: 100%; /* Se ajusta al ancho de la card */
-  border-radius: 8px 8px 0 0; /* Mantiene bordes bonitos */
+  border-radius: 8px 8px 0 0;
 }
