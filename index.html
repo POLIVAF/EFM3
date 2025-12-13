@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Buscador de Recetas</title>
-    <!-- Bootstrap CDN --se puede colocar defer></script>, ejecútalo solo cuando todo el HTML esté listo-->  
+    <!-- Bootstrap CDN --se puede colocar defer></script>, ejecútalo solo cuando todo el HTML esté listo-->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -12,254 +12,353 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="./assets/css/style.css">
-
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body class="bg-light">
+    <nav class="navbar navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img
+            src="https://i.ibb.co/CK0NcM4G/logo-recetas2.png"
+            alt="Gourmet Go Logo"
+            class="navbar-logo"
+          />
+        </a>
+        <a class="nav-link" href="#contacto">Contacto</a>
+      </div>
+    </nav>
     <!-- Encabezado -->
     <header class="header-transparente py-4 mb-4">
-      <h1 class="text-center fw-bold display-4 text-white text-shadow-soft">Buscador de Recetas</h1>
-      
+      <h1 class="text-center fw-bold display-4 text-white text-shadow-soft">
+        Buscador de Recetas
+      </h1>
     </header>
     <main>
-     <!-- Contenedor principal -->
+      <!-- Contenedor principal -->
       <div class="container">
         <div class="row">
           <div class="col-12">
             <form action="" id="">
-                 <!-- Input de búsqueda -->
+              <!-- Input de búsqueda -->
               <div class="mb-3">
-                <label for="buscar receta" class="form-label text-white text-shadow-soft fs-4 fw-bold">Buscar Receta</label>
-                <input type="text"
-                class="form-control"
-                placeholder="Buscar por ingrediente"/>
+                <label
+                  for="buscar receta"
+                  class="form-label text-white text-shadow-soft fs-4 fw-bold"
+                  >Buscar Receta</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Buscar por ingrediente"
+                />
               </div>
               <!-- Botón -->
-              <button type="button" class="btn btn-primary w-100 btn-lg fw-bold mb-4 fs-4">
+              <button
+                type="button"
+                class="btn btn-primary w-100 btn-lg fw-bold mb-4 fs-4"
+              >
                 Buscar
               </button>
             </form>
           </div>
         </div>
       </div>
-      
+
       <!-- Sección de recetas -->
-<!-- Sección de recetas -->
-<section class="container mt-5 mb-5">
-    <h2 class="text-center mb-4 text-white text-shadow-soft fw-bold">Recetas</h2>
+      <!-- Sección de recetas -->
+      <section class="container mt-5 mb-5">
+        <h2 class="text-center mb-4 text-white text-shadow-soft fw-bold">
+          Recetas
+        </h2>
 
-    <!-- ===================== F I L A   1 ===================== -->
-    <div class="row g-4" id="fila1">
-
-        <!-- TARJETA 1 -->
-        <div class="col-12 col-md-6 col-lg-4">
+        <!-- ===================== F I L A   1 ===================== -->
+        <div class="row g-4" id="fila1">
+          <!-- TARJETA 1 -->
+          <div class="col-12 col-md-6 col-lg-4">
             <div class="card shadow-sm h-100">
-                <img src="https://www.everydayeasyeats.com/wp-content/uploads/2016/06/Cherry-Tomato-Cucumber-Spinach-Salad-1.jpg" class="card-img-top img-card" alt="Receta 1">
+              <img
+                src="https://www.everydayeasyeats.com/wp-content/uploads/2016/06/Cherry-Tomato-Cucumber-Spinach-Salad-1.jpg"
+                class="card-img-top img-card"
+                alt="Receta 1"
+              />
 
-                <div class="card-body">
-                    <h5 class="card-title">Ensalada Fresca</h5>
-                    <a class="btn btn-primary w-100"
-                       data-bs-toggle="collapse"
-                       data-bs-target="#receta1">
-                       Ver receta
-                    </a>
-                </div>
+              <div class="card-body">
+                <h5 class="card-title">Ensalada Fresca</h5>
+                <a
+                  class="btn btn-primary w-100"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#receta1"
+                >
+                  Ver receta
+                </a>
+              </div>
 
-                <div class="collapse mt-3 p-3" id="receta1" data-bs-parent="#fila1">
-                    <p><strong>Ingredientes:</strong></p>
-                    <ul>
-                        <li>Lechuga</li>
-                        <li>Tomate</li>
-                        <li>Pepino</li>
-                    </ul>
-                    <p><strong>Preparación:</strong></p>
-                    <p>- Mezcla los ingredientes y aliña.</p>
-                </div>
+              <div
+                class="collapse mt-3 p-3"
+                id="receta1"
+                data-bs-parent="#fila1"
+              >
+                <p><strong>Ingredientes:</strong></p>
+                <ul>
+                  <li>Lechuga</li>
+                  <li>Tomate</li>
+                  <li>Pepino</li>
+                </ul>
+                <p><strong>Preparación:</strong></p>
+                <p>- Mezcla los ingredientes y aliña.</p>
+              </div>
             </div>
-        </div>
+          </div>
 
-        <!-- TARJETA 2 -->
-        <div class="col-12 col-md-6 col-lg-4">
+          <!-- TARJETA 2 -->
+          <div class="col-12 col-md-6 col-lg-4">
             <div class="card shadow-sm h-100">
-                <img src="https://richanddelish.com/wp-content/uploads/2023/02/creamy-pesto-pasta-5-of-15.jpg" class="card-img-top img-card" alt="Receta 2">
+              <img
+                src="https://richanddelish.com/wp-content/uploads/2023/02/creamy-pesto-pasta-5-of-15.jpg"
+                class="card-img-top img-card"
+                alt="Receta 2"
+              />
 
-                <div class="card-body">
-                    <h5 class="card-title">Pasta al Pesto</h5>
-                    <a class="btn btn-primary w-100"
-                       data-bs-toggle="collapse"
-                       data-bs-target="#receta2">
-                       Ver receta
-                    </a>
-                </div>
+              <div class="card-body">
+                <h5 class="card-title">Pasta al Pesto</h5>
+                <a
+                  class="btn btn-primary w-100"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#receta2"
+                >
+                  Ver receta
+                </a>
+              </div>
 
-                <div class="collapse mt-3 p-3" id="receta2" data-bs-parent="#fila1">
-                    <p><strong>Ingredientes:</strong></p>
-                    <ul>
-                        <li>Fideos</li>
-                        <li>Albahaca</li>
-                        <li>Ajo</li>
-                        <li>Aceite de Oliva</li>
-                        <li>Parmesano</li>
-                    </ul>
-                    <p><strong>Preparación:</strong></p>
-                    <P>- Mezcla aceitecon albaca y ajo molido.</P>
-                    <p>- Mezcla la pasta con el pesto recién preparado, agregar queso parmesano a gusto.</p>
-                </div>
+              <div
+                class="collapse mt-3 p-3"
+                id="receta2"
+                data-bs-parent="#fila1"
+              >
+                <p><strong>Ingredientes:</strong></p>
+                <ul>
+                  <li>Fideos</li>
+                  <li>Albahaca</li>
+                  <li>Ajo</li>
+                  <li>Aceite de Oliva</li>
+                  <li>Parmesano</li>
+                </ul>
+                <p><strong>Preparación:</strong></p>
+                <p>- Mezcla aceitecon albaca y ajo molido.</p>
+                <p>
+                  - Mezcla la pasta con el pesto recién preparado, agregar queso
+                  parmesano a gusto.
+                </p>
+              </div>
             </div>
-        </div>
+          </div>
 
-        <!-- TARJETA 3 -->
-        <div class="col-12 col-md-6 col-lg-4">
+          <!-- TARJETA 3 -->
+          <div class="col-12 col-md-6 col-lg-4">
             <div class="card shadow-sm h-100">
-                <img src="https://www.budgetbytes.com/wp-content/uploads/2024/06/Grilled-Chicken-V1.jpeg" class="card-img-top img-card" alt="Receta 3">
+              <img
+                src="https://www.budgetbytes.com/wp-content/uploads/2024/06/Grilled-Chicken-V1.jpeg"
+                class="card-img-top img-card"
+                alt="Receta 3"
+              />
 
-                <div class="card-body">
-                    <h5 class="card-title">Pollo a la Plancha</h5>
-                    <a class="btn btn-primary w-100"
-                       data-bs-toggle="collapse"
-                       data-bs-target="#receta3">
-                       Ver receta
-                    </a>
-                </div>
+              <div class="card-body">
+                <h5 class="card-title">Pollo a la Plancha</h5>
+                <a
+                  class="btn btn-primary w-100"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#receta3"
+                >
+                  Ver receta
+                </a>
+              </div>
 
-                <div class="collapse mt-3 p-3" id="receta3" data-bs-parent="#fila1">
-                    <p><strong>Ingredientes:</strong></p>
-                    <ul>
-                        <li>Pechuga de pollo</li>
-                        <li>Sal</li>
-                        <li>Pimienta</li>
-                        <li>Limón</li>
-                    </ul>
-                    <p><strong>Preparación:</strong></p>
-                    <p>- Sazonar La pechuga a gustos con las especias.</p>
-                    <p>- Cocina el pollo 30 minutos, 15 minutos por lado.</p>
-                </div>
+              <div
+                class="collapse mt-3 p-3"
+                id="receta3"
+                data-bs-parent="#fila1"
+              >
+                <p><strong>Ingredientes:</strong></p>
+                <ul>
+                  <li>Pechuga de pollo</li>
+                  <li>Sal</li>
+                  <li>Pimienta</li>
+                  <li>Limón</li>
+                </ul>
+                <p><strong>Preparación:</strong></p>
+                <p>- Sazonar La pechuga a gustos con las especias.</p>
+                <p>- Cocina el pollo 30 minutos, 15 minutos por lado.</p>
+              </div>
             </div>
-        </div>
-
-    </div> <!-- Fin fila 1 -->
-
-    <!-- ===================== F I L A   2 ===================== -->
-    <div class="row g-4 mt-4" id="fila2">
-
-        <!-- TARJETA 4 -->
-        <div class="col-12 col-md-6 col-lg-4">
+          </div>
+          <!-- TARJETA 4 -->
+          <div class="col-12 col-md-6 col-lg-4">
             <div class="card shadow-sm h-100">
-                <img src="https://www.thereciperebel.com/wp-content/uploads/2019/01/instant-pot-vegetable-soup-www.thereciperebel.com-1200-3-of-3.jpg" class="card-img-top img-card" alt="Receta 4">
+              <img
+                src="https://www.thereciperebel.com/wp-content/uploads/2019/01/instant-pot-vegetable-soup-www.thereciperebel.com-1200-3-of-3.jpg"
+                class="card-img-top img-card"
+                alt="Receta 4"
+              />
 
-                <div class="card-body">
-                    <h5 class="card-title">Sopa de Verduras</h5>
-                    <a class="btn btn-primary w-100"
-                       data-bs-toggle="collapse"
-                       data-bs-target="#receta4">
-                       Ver receta
-                    </a>
-                </div>
+              <div class="card-body">
+                <h5 class="card-title">Sopa de Verduras</h5>
+                <a
+                  class="btn btn-primary w-100"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#receta4"
+                >
+                  Ver receta
+                </a>
+              </div>
 
-                <div class="collapse mt-3 p-3" id="receta4" data-bs-parent="#fila2">
-                    <p><strong>Ingredientes:</strong></p>
-                    <ul>
-                        <li>Zanahoria</li>
-                        <li>Papa</li>
-                        <li>Apio</li>
-                        <li>Caldo</li>
-                    </ul>
-                    <p><strong>Preparación:</strong></p>
-                    <p>- Hierve todo 20 minutos.</p>
-                </div>
+              <div
+                class="collapse mt-3 p-3"
+                id="receta4"
+                data-bs-parent="#fila2"
+              >
+                <p><strong>Ingredientes:</strong></p>
+                <ul>
+                  <li>Zanahoria</li>
+                  <li>Papa</li>
+                  <li>Apio</li>
+                  <li>Caldo</li>
+                </ul>
+                <p><strong>Preparación:</strong></p>
+                <p>- Hierve todo 20 minutos.</p>
+              </div>
             </div>
-        </div>
+          </div>
 
-        <!-- TARJETA 5 -->
-        <div class="col-12 col-md-6 col-lg-4">
+          <!-- TARJETA 5 -->
+          <div class="col-12 col-md-6 col-lg-4">
             <div class="card shadow-sm h-100">
-                <img src="https://damndelicious.net/wp-content/uploads/2019/04/Mexican-Street-TacosIMG_9108-1.jpg" class="card-img-top img-card" alt="Receta 5">
+              <img
+                src="https://damndelicious.net/wp-content/uploads/2019/04/Mexican-Street-TacosIMG_9108-1.jpg"
+                class="card-img-top img-card"
+                alt="Receta 5"
+              />
 
-                <div class="card-body">
-                    <h5 class="card-title">Tacos de Carne</h5>
-                    <a class="btn btn-primary w-100"
-                       data-bs-toggle="collapse"
-                       data-bs-target="#receta5">
-                       Ver receta
-                    </a>
-                </div>
+              <div class="card-body">
+                <h5 class="card-title">Tacos de Carne</h5>
+                <a
+                  class="btn btn-primary w-100"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#receta5"
+                >
+                  Ver receta
+                </a>
+              </div>
 
-                <div class="collapse mt-3 p-3" id="receta5" data-bs-parent="#fila2">
-                    <p><strong>Ingredientes:</strong></p>
-                    <ul>
-                        <li>Tortillas</li>
-                        <li>Carne</li>
-                        <li>Queso</li>
-                        <li>Tomate</li>
-                    </ul>
-                    <p><strong>Preparación:</strong></p>
-                    <p>- Armar y servir caliente.</p>
-                </div>
+              <div
+                class="collapse mt-3 p-3"
+                id="receta5"
+                data-bs-parent="#fila2"
+              >
+                <p><strong>Ingredientes:</strong></p>
+                <ul>
+                  <li>Tortillas</li>
+                  <li>Carne</li>
+                  <li>Queso</li>
+                  <li>Tomate</li>
+                </ul>
+                <p><strong>Preparación:</strong></p>
+                <p>- Armar y servir caliente.</p>
+              </div>
             </div>
-        </div>
+          </div>
 
-        <!-- TARJETA 6 -->
-        <div class="col-12 col-md-6 col-lg-4">
+          <!-- TARJETA 6 -->
+          <div class="col-12 col-md-6 col-lg-4">
             <div class="card shadow-sm h-100">
-                <img src="https://www.recipetineats.com/tachyon/2020/03/Brownies_0-SQ.jpg" class="card-img-top img-card" alt="Receta 6">
+              <img
+                src="https://www.recipetineats.com/tachyon/2020/03/Brownies_0-SQ.jpg"
+                class="card-img-top img-card"
+                alt="Receta 6"
+              />
 
-                <div class="card-body">
-                    <h5 class="card-title">Brownies</h5>
-                    <a class="btn btn-primary w-100"
-                       data-bs-toggle="collapse"
-                       data-bs-target="#receta6">
-                       Ver receta
-                    </a>
-                </div>
+              <div class="card-body">
+                <h5 class="card-title">Brownies</h5>
+                <a
+                  class="btn btn-primary w-100"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#receta6"
+                >
+                  Ver receta
+                </a>
+              </div>
 
-                <div class="collapse mt-3 p-3" id="receta6" data-bs-parent="#fila2">
-                    <p><strong>Ingredientes:</strong></p>
-                    <ul>
-                        <li>Chocolate</li>
-                        <li>Harina</li>
-                        <li>Mantequilla</li>
-                        <li>Azúcar</li>
-                    </ul>
-                    <p><strong>Preparación:</strong></p>
-                    <p>- Mezclar todos los ingredientes</p>
-                    <p>- Hornear 25 minutos.</p>
-                </div>
+              <div
+                class="collapse mt-3 p-3"
+                id="receta6"
+                data-bs-parent="#fila2"
+              >
+                <p><strong>Ingredientes:</strong></p>
+                <ul>
+                  <li>Chocolate</li>
+                  <li>Harina</li>
+                  <li>Mantequilla</li>
+                  <li>Azúcar</li>
+                </ul>
+                <p><strong>Preparación:</strong></p>
+                <p>- Mezclar todos los ingredientes</p>
+                <p>- Hornear 25 minutos.</p>
+              </div>
             </div>
+          </div>
+
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Launch demo modal
+          </button>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Modal title
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">...</div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button type="button" class="btn btn-primary">
+                    Save changes
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-    </div> <!-- Fin fila 2 -->
-
-</section>
-
-
+        <!-- Fin fila 2 -->
+      </section>
     </main>
 
-    <footer>
-
-    </footer>
+    <footer></footer>
 
     <!-- Bootstrap JS (opcional) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
