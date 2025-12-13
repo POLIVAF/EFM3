@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tacos de Carne</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./../assets/css/style.css">
+</head>
+<body class="d-flex bg-light" style="height: 100vh;">
+    <aside class="cutting-board position-fixed top-0 start-0 d-flex flex-column flex-shrink-0 p-3 bg-light rounded-top-3 position-relative" style="width: 280px; max-width: 280px; min-width: 280px; z-index: 200;">
+        <div class="wood-grain position-absolute top-0 start-0 w-100 h-100 rounded-top-3" style="z-index: 1;"></div>
+
+        <div class="board-handle position-absolute rounded-circle" style="width: 40px; height: 40px; top: -50px; left: calc(50% - 20px);"></div>
+
+        <img src="./../assets/img/kitchen-knife-svgrepo-com.svg" class="knife-svg position-absolute" style="width: 150px; height: 150px; top: -120px; right: -50px; z-index: 10;" alt="Kitchen Knife">
+
+        <header class="py-4 mb-4 position-relative" style="z-index: 2;">
+            <h1 class="fw-bold display-4 text-white text-shadow-soft">Recetario</h1>
+        </header>
+        <hr class="position-relative" style="z-index: 2;">
+        <menu class="nav nav-pills flex-column mb-auto position-relative" style="z-index: 2;">
+            <li class="nav-item">
+                <a class="nav-link" href="../index3.html">Índice</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="receta_ensalada-fresca.html">Ensalada Fresca</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="receta_pasta-al-pesto.html">Pasta al Pesto</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="receta_pollo-a-la-plancha.html">Pollo a la Plancha</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="receta_sopa-de-verduras.html">Sopa de Verduras</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="receta_tacos-de-carne.html">Tacos de Carne</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="receta_brownies.html">Brownies</a>
+            </li>
+        </menu>
+    </aside>
+    <main class="flex-fill overflow-auto p-4" style="margin-left: 280px; height: 100vh;">
+        <article class="container">
+            <header>
+                <h1>Tacos de Carne</h1>
+            </header>
+            <div>
+                <p><strong>Ingredientes:</strong></p>
+                <ul>
+                <li>Tortillas</li>
+                <li>Carne</li>
+                <li>Queso</li>
+                <li>Tomate</li>
+                </ul>
+
+                <p><strong>Preparación:</strong></p>
+                <p>Armar los tacos y servir caliente.</p>
+            </div>
+        </article>
+    </main>
+</body>
+</html>

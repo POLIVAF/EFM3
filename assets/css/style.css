@@ -1,38 +1,269 @@
-/* Fondo general con imagen */
-body {
-  background-image: url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  position: relative;
+/* View transitions */
+@view-transition {
+  navigation: auto;
 }
 
-/* Capa transparente con degradado */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
-  /* Degradado desde transparente a blanco */
-  background: linear-gradient(
-    rgba(255, 255, 255, 0.2),
-    /* Transparencia suave arriba */ rgba(255, 255, 255, 0.2)
-      /* Casi blanco abajo */
-  );
-
-  z-index: -1;
+body > aside {
+  view-transition-name: none;
 }
 
+body > main {
+  view-transition-name: main;
+}
+
+/* Custom utilities not in Bootstrap */
 .text-shadow-soft {
   text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
 }
 
 .img-card {
-  height: 200px; /* Todas tendrán la misma altura */
-  object-fit: cover; /* Recorta sin deformar */
-  width: 100%; /* Se ajusta al ancho de la card */
-  border-radius: 8px 8px 0 0; /* Mantiene bordes bonitos */
+  height: 200px;
+  object-fit: cover;
+}
+
+::view-transition {
+  background-image: url("../img/8291.jpg");
+  background-repeat: repeat;
+  background-size: 500px;
+  background-position: center center;
+  background-origin: center;
+}
+
+::view-transition-image-pair(main) {
+  perspective: 2500px;
+  perspective-origin: center;
+  transform-style: preserve-3d;
+  transform-origin: 50% 50% 100vw;
+  filter: drop-shadow(0px 0px 6px hsl(165deg 11% 3%))
+    drop-shadow(0px 0px 25px hsl(165deg 11% 3%/50%));
+}
+
+::view-transition-old(main),
+::view-transition-new(main) {
+  animation: 1.5s
+    linear(
+      0,
+      0.324 9.1%,
+      0.584 18.6%,
+      0.782 28.6%,
+      0.858 33.8%,
+      0.92 39.2%,
+      0.997 49.5%,
+      1.021 55.1%,
+      1.033 61%,
+      1.035 71.7%,
+      1
+    );
+  transform-style: preserve-3d;
+  transform-origin: 50% 50% 0;
+  transform: translateZ(-50vw) scale(var(--scale)) rotatey(var(--rotation))
+    translatez(50vw);
+  backface-visibility: hidden;
+}
+
+::view-transition-old(main) {
+  animation-name: reveal-out;
+}
+
+::view-transition-new(main) {
+  animation-name: reveal-in;
+}
+
+@property --rotation {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@property --scale {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 1;
+}
+
+@keyframes reveal-in {
+  from {
+    --rotation: -90deg;
+    animation-timing-function: ease-in-out;
+  }
+  15% {
+    --scale: 0.8;
+    --rotation: -90deg;
+  }
+  85% {
+    --scale: 0.8;
+    --rotation: 0deg;
+    animation-timing-function: ease-in-out;
+  }
+  to {
+    --rotation: 0deg;
+  }
+}
+
+@keyframes reveal-out {
+  from {
+    --rotation: 0deg;
+    animation-timing-function: ease-in-out;
+  }
+  15% {
+    --scale: 0.8;
+    --rotation: 0deg;
+  }
+  85% {
+    --scale: 0.8;
+    --rotation: 90deg;
+    animation-timing-function: ease-in-out;
+  }
+  to {
+    --rotation: 90deg;
+  }
+}
+
+.cutting-board {
+    background:
+        linear-gradient(
+            to right,
+            rgba(139, 90, 60, 0.3) 0%,
+            transparent 5%,
+            transparent 95%,
+            rgba(93, 62, 40, 0.3) 100%
+        ),
+        linear-gradient(135deg,
+            #A0826D 0%,
+            #8B5A3C 15%,
+            #6F4E37 30%,
+            #8B5A3C 50%,
+            #A67C52 70%,
+            #8B5A3C 85%,
+            #6F4E37 100%
+        );
+    box-shadow:
+        inset 0 3px 8px rgba(255, 255, 255, 0.25),
+        inset 0 -3px 8px rgba(0, 0, 0, 0.35),
+        inset 3px 0 6px rgba(0, 0, 0, 0.2),
+        inset -3px 0 6px rgba(0, 0, 0, 0.2),
+        6px 12px 24px rgba(0, 0, 0, 0.5),
+        0 4px 8px rgba(0, 0, 0, 0.3);
+    border: 4px solid #5D3A1A;
+    border-radius: 24px 24px 0 0;
+    animation: sway 4s ease-in-out infinite;
+    transform-origin: top center;
+}
+
+/* Wood grain texture - enhanced */
+.wood-grain {
+    background:
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 8px,
+            rgba(101, 67, 33, 0.15) 8px,
+            rgba(101, 67, 33, 0.15) 9px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 25px,
+            rgba(139, 90, 60, 0.08) 25px,
+            rgba(139, 90, 60, 0.08) 27px
+        ),
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 100px,
+            rgba(0, 0, 0, 0.06) 100px,
+            rgba(0, 0, 0, 0.06) 103px
+        ),
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 60px,
+            rgba(101, 67, 33, 0.04) 60px,
+            rgba(101, 67, 33, 0.04) 61px
+        );
+    pointer-events: none;
+    opacity: 0.9;
+}
+
+/* Rope/handle hole at top - enhanced */
+.board-handle {
+    background:
+        radial-gradient(
+            circle at 30% 30%,
+            #3D2817 0%,
+            #654321 40%,
+            #8B5A3C 80%,
+            #6F4E37 100%
+        );
+    box-shadow:
+        inset 0 4px 8px rgba(0, 0, 0, 0.7),
+        inset 0 -2px 4px rgba(255, 255, 255, 0.1),
+        0 3px 6px rgba(0, 0, 0, 0.4);
+    border: 3px solid #3D2817;
+}
+
+/* SVG Knife */
+.knife-svg {
+    filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.4));
+    transform-origin: 20% 50%;
+}
+
+/* Chopping animation during view transition */
+@keyframes chop {
+    0% {
+        transform: translate(-50vw, -100vh) rotate(-180deg) scale(3);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    15% {
+        transform: translate(-30vw, -20vh) rotate(-90deg) scale(2.5);
+    }
+    25% {
+        transform: translate(20vw, 20vh) rotate(45deg) scale(2);
+    }
+    35% {
+        transform: translate(-10vw, 40vh) rotate(-45deg) scale(1.8);
+    }
+    45% {
+        transform: translate(30vw, 60vh) rotate(90deg) scale(2.2);
+    }
+    55% {
+        transform: translate(-20vw, 80vh) rotate(-135deg) scale(1.5);
+    }
+    65% {
+        transform: translate(15vw, 100vh) rotate(180deg) scale(2);
+    }
+    75% {
+        transform: translate(-25vw, 120vh) rotate(-90deg) scale(2.5);
+    }
+    85% {
+        transform: translate(10vw, 140vh) rotate(360deg) scale(2);
+    }
+    95% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(40vw, 160vh) rotate(540deg) scale(3);
+        opacity: 0;
+    }
+}
+
+/* Trigger chop animation on view transition */
+html:active-view-transition .knife-svg {
+    animation: chop 2s ease-in-out;
+}
+
+/* Swaying animation */
+@keyframes sway {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-2deg);
+    }
+    75% {
+        transform: rotate(2deg);
+    }
 }
