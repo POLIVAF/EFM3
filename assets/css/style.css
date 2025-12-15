@@ -45,13 +45,6 @@
   transform: rotateY(180deg);
 }
 
-/* Imagen */
-.img-card {
-  height: 200px;
-  object-fit: cover;
-}
-
-
 /* --- FONDO GENERAL CON IMAGEN --- */
 body {
   background-image: url("https://i.ibb.co/zVN95G9h/Chat-GPT-Image-11-dic-2025-21-30-27.png");
@@ -84,8 +77,21 @@ body::before {
 /* --- AJUSTE UNIVERSAL DE IMÁGENES --- */
 .card-img-top,
 .img-card {
-  height: 200px !important;
   width: 100%;
+  height: 200px;
   object-fit: cover;
   border-radius: 8px 8px 0 0;
+}
+
+/* --- Navbar --- */
+.navbar-logo {
+  height: 40px;
+  width: auto;
+}
+
+/* --- Ajuste responsive (solo si el logo es muy alto en móvil) --- */
+@media (max-width: 576px) {
+  .navbar-logo {
+    height: 32px;
+  }
 }
