@@ -28,27 +28,25 @@
   </header>
   <main>
     <!-- Contenedor principal -->
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <form action="" id="form-busqueda-recetas" class="row">
-            <div class="col-12">
-              <!-- Input de búsqueda -->
-              <label for="buscar-receta" class="form-label text-white text-shadow-soft fs-4 fw-bold">Buscar
-                Receta</label>
-              <input type="text" id="buscar-receta" class="form-control" placeholder="Buscar por ingrediente"
-                aria-label="Buscar receta" />
-            </div>
-            <div class="col-12 mt-2">
-              <!-- Botón -->
-              <button type="button" class="btn btn-primary w-100 btn-lg fw-bold mb-4 fs-4">
-                Buscar
-              </button>
-            </div>
-          </form>
+     <!-- FORMULARIO DE BÚSQUEDA -->
+      <form class="container mb-5">
+        <div class="row justify-content-center">
+          <div
+            class="col-12 col-md-8 col-lg-6 d-flex gap-2 bg-light p-3 rounded shadow"
+          >
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Busca por ingrediente..."
+              aria-label="Buscar receta"
+            />
+            <button type="submit" class="btn btn-primary">Buscar</button>
+            <a href="#" class="btn btn-primary">
+            Ver más recetas
+            </a>
+          </div>
         </div>
-      </div>
-    </div>
+      </form>
 
     <!-- Sección de recetas -->
     <section class="container my-5">

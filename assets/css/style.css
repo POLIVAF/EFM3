@@ -1,11 +1,14 @@
+/* ===== CONTENEDOR ===== */
 .flip-card-container {
   perspective: 1000px;
 }
 
+/* Ocultamos el checkbox */
 .flip-toggle {
   display: none;
 }
 
+/* ===== CARD ===== */
 .flip-card {
   position: relative;
   width: 100%;
@@ -14,7 +17,12 @@
   transform-style: preserve-3d;
   transition: transform 0.6s;
 }
+.flip-front .card-body {
+  padding-top: 2rem;
+  text-align: center;
+}
 
+/* ===== FRONT Y BACK ===== */
 .flip-front,
 .flip-back {
   position: absolute;
@@ -26,26 +34,17 @@
   border-radius: 0.5rem;
 }
 
-.flip-front {
-  .card-body {
-    padding-top: 2rem;
-    text-align: center;
-  }
-}
-
+/* BACK */
 .flip-back {
   transform: rotateY(180deg);
 }
 
+/* ===== EFECTO FLIP ===== */
 .flip-toggle:checked + .flip-card {
   transform: rotateY(180deg);
 }
 
-.img-card {
-  height: 200px;
-  object-fit: cover;
-}
-
+/* --- FONDO GENERAL CON IMAGEN --- */
 body {
   background-image: url("https://i.ibb.co/zVN95G9h/Chat-GPT-Image-11-dic-2025-21-30-27.png");
   background-size: cover;
@@ -54,6 +53,7 @@ body {
   position: relative;
 }
 
+/* --- CAPA TRANSPARENTE DEGRADADA --- */
 body::before {
   content: "";
   position: fixed;
@@ -62,29 +62,40 @@ body::before {
   width: 100%;
   height: 100%;
   background: linear-gradient(
-    rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.2)
   );
   z-index: -1;
 }
 
+/* --- SOMBRA DE TEXTO --- */
 .text-shadow-soft {
   text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
 }
 
+/* --- AJUSTE UNIVERSAL DE IMÁGENES --- */
 .card-img-top,
 .img-card {
-  height: 200px !important;
   width: 100%;
+  height: 200px;
   object-fit: cover;
   border-radius: 8px 8px 0 0;
 }
 
-.header-transparente {
-  background: rgba(0, 0, 0, 0.4); /* leve fondo oscuro */
-  backdrop-filter: blur(4px);      /* efecto de vidrio esmerilado */
-}
-
+/* --- Navbar --- */
 .navbar-logo {
   height: 40px;
   width: auto;
+}
+
+/* --- Ajuste responsive (solo si el logo es muy alto en móvil) --- */
+@media (max-width: 576px) {
+  .navbar-logo {
+    height: 32px;
+  }
+}
+
+.header-transparente {
+  background: rgba(0, 0, 0, 0.4); /* leve fondo oscuro */
+  backdrop-filter: blur(4px); /* efecto de vidrio esmerilado */
 }
