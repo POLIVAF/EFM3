@@ -22,7 +22,6 @@
   text-align: center;
 }
 
-
 /* ===== FRONT Y BACK ===== */
 .flip-front,
 .flip-back {
@@ -94,4 +93,9 @@ body::before {
   .navbar-logo {
     height: 32px;
   }
+}
+
+.header-transparente {
+  background: rgba(0, 0, 0, 0.4); /* leve fondo oscuro */
+  backdrop-filter: blur(4px); /* efecto de vidrio esmerilado */
 }
