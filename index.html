@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Buscador de Recetas</title>
-  <!-- Bootstrap CDN --se puede colocar defer></script>, ejecútalo solo cuando todo el HTML esté listo-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body class="bg-light">
@@ -23,9 +22,7 @@
   </nav>
   <!-- Encabezado -->
   <header class="header-transparente py-4 mb-4">
-    <h1 class="text-center fw-bold display-4 text-white text-shadow-soft">
-      Buscador de Recetas
-    </h1>
+    <h1 class="text-center fw-bold display-4 text-white text-shadow-soft">Buscador de Recetas</h1>
     <p class="text-center text-white text-shadow-soft fs-5 mb-0">
       Encuentra recetas según los ingredientes que tienes en casa
     </p>
@@ -35,308 +32,291 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <form action="" id="form-busqueda-recetas">
-            <!-- Input de búsqueda -->
-            <div class="mb-3">
-              <label for="buscar-receta" class="form-label text-white text-shadow-soft fs-4 fw-bold">
-                Buscar Receta
-              </label>
-              <input type="text" id="buscar-receta" class="form-control" placeholder="Buscar por ingrediente" />
+          <form action="" id="form-busqueda-recetas" class="row">
+            <div class="col-12">
+              <!-- Input de búsqueda -->
+              <label for="buscar-receta" class="form-label text-white text-shadow-soft fs-4 fw-bold">Buscar
+                Receta</label>
+              <input type="text" id="buscar-receta" class="form-control" placeholder="Buscar por ingrediente"
+                aria-label="Buscar receta" />
             </div>
-            <!-- Botón -->
-            <button type="button" class="btn btn-primary w-100 btn-lg fw-bold mb-4 fs-4">
-              Buscar
-            </button>
+            <div class="col-12 mt-2">
+              <!-- Botón -->
+              <button type="button" class="btn btn-primary w-100 btn-lg fw-bold mb-4 fs-4">
+                Buscar
+              </button>
+            </div>
           </form>
         </div>
       </div>
     </div>
 
     <!-- Sección de recetas -->
-    <section class="container mt-5 mb-5">
+    <section class="container my-5">
       <div class="row g-4">
-        <div class="col-12">
-          <h2 class="text-center mb-4 text-white text-shadow-soft fw-bold">
-            Recetas
-          </h2>
-        </div>
+        <header class="col-12">
+          <h2 class="text-center mb-4 text-white text-shadow-soft fw-bold">Recetas</h2>
+        </header>
+
         <!-- TARJETA 1 -->
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="card shadow-sm h-100">
-            <img
-              src="https://www.everydayeasyeats.com/wp-content/uploads/2016/06/Cherry-Tomato-Cucumber-Spinach-Salad-1.jpg"
-              class="card-img-top img-card" alt="Receta 1" />
+          <div class="flip-card-container">
+            <input type="checkbox" id="receta1" class="flip-toggle" />
 
-            <div class="card-body">
-              <h5 class="card-title">Ensalada Fresca</h5>
-              <a class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalReceta1">
-                Ver receta
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- MODAL 1 -->
-        <div class="modal fade" id="modalReceta1" tabindex="-1" aria-labelledby="modalReceta1Label" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="modalReceta1Label">Ensalada Fresca</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            <div class="flip-card">
+              <div class="flip-front card shadow">
+                <img
+                  src="https://www.everydayeasyeats.com/wp-content/uploads/2016/06/Cherry-Tomato-Cucumber-Spinach-Salad-1.jpg"
+                  class="card-img-top img-card" alt="Ensalada Cesar" />
+                <div class="card-body text-center">
+                  <h5 class="card-title">Ensalada Cesar</h5>
+                </div>
+                <div class="card-footer text-center">
+                  <label for="receta1" class="btn btn-primary" role="button">
+                    Ver receta
+                  </label>
+                </div>
               </div>
 
-              <div class="modal-body">
-                <p><strong>Ingredientes:</strong></p>
-                <ul>
-                  <li>Lechuga</li>
-                  <li>Tomate</li>
-                  <li>Pepino</li>
-                </ul>
-
-                <p><strong>Preparación:</strong></p>
-                <p>Mezcla los ingredientes y aliña a gusto.</p>
+              <div class="flip-back card shadow">
+                <div class="card-body">
+                  <h4>Ingredientes</h4>
+                  <ul>
+                    <li>Lechuga</li>
+                    <li>Pollo</li>
+                    <li>Aceite de Oliva extra virgen</li>
+                    <li>Tomates Cherry</li>
+                    <li>Semillas de Maravilla</li>
+                  </ul>
+                  <h4>Preparación</h4>
+                  <p>
+                    prepara la ensalada y agregar cada ingrediente luego,
+                    revolver agregar aceite a gusto ysal.
+                  </p>
+                </div>
+                <div class="card-footer text-center">
+                  <label for="receta1" class="btn btn-secondary" role="button">Volver</label>
+                </div>
               </div>
-
-              <div class="modal-footer">
-                <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-              </div>
-
             </div>
           </div>
         </div>
 
         <!-- TARJETA 2 -->
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="card shadow-sm h-100">
-            <img src="https://richanddelish.com/wp-content/uploads/2023/02/creamy-pesto-pasta-5-of-15.jpg"
-              class="card-img-top img-card" alt="Receta 2" />
 
-            <div class="card-body">
-              <h5 class="card-title">Pasta al Pesto</h5>
-              <a class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalReceta2">
-                Ver receta
-              </a>
-            </div>
-          </div>
-        </div>
 
-        <!-- MODAL 2 -->
-        <div class="modal fade" id="modalReceta2" tabindex="-1" aria-labelledby="modalReceta2Label" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
+          <div class="flip-card-container">
+            <input type="checkbox" id="receta2" class="flip-toggle" />
 
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="modalReceta2Label">Pasta al Pesto</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            <div class="flip-card">
+              <div class="flip-front card shadow">
+                <img src="https://richanddelish.com/wp-content/uploads/2023/02/creamy-pesto-pasta-5-of-15.jpg"
+                  class="card-img-top img-card" alt="Pasta al Pesto" />
+                <div class="card-body text-center">
+                  <h5 class="card-title">Pasta al Pesto</h5>
+                </div>
+                <div class="card-footer text-center">
+                  <label for="receta2" class="btn btn-primary" role="button">
+                    Ver receta
+                  </label>
+                </div>
               </div>
 
-              <div class="modal-body">
-                <p><strong>Ingredientes:</strong></p>
-                <ul>
-                  <li>Fideos</li>
-                  <li>Albahaca</li>
-                  <li>Ajo</li>
-                  <li>Aceite de oliva</li>
-                  <li>Parmesano</li>
-                </ul>
-
-                <p><strong>Preparación:</strong></p>
-                <p>Mezcla aceite con albahaca y ajo molido.</p>
-                <p>Mezcla la pasta con el pesto recién preparado y agrega parmesano a gusto.</p>
+              <div class="flip-back card shadow">
+                <div class="card-body">
+                  <h4>Ingredientes</h4>
+                  <ul>
+                    <li>Pasta</li>
+                    <li>Diente de ajo</li>
+                    <li>Albahaca fresca, sólo las hojas</li>
+                    <li>Aceite de oliva virgen extra</li>
+                    <li>Sal</li>
+                  </ul>
+                  <h4>Preparación</h4>
+                  <p>
+                    Prepara la pasta primero luego, mezcla todo y agrega
+                    aderezo.
+                  </p>
+                </div>
+                <div class="card-footer text-center">
+                  <label for="receta2" class="btn btn-secondary" role="button">Volver</label>
+                </div>
               </div>
-
-              <div class="modal-footer">
-                <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-              </div>
-
             </div>
           </div>
         </div>
 
         <!-- TARJETA 3 -->
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="card shadow-sm h-100">
-            <img src="https://www.budgetbytes.com/wp-content/uploads/2024/06/Grilled-Chicken-V1.jpeg"
-              class="card-img-top img-card" alt="Receta 3" />
+          <div class="flip-card-container">
+            <input type="checkbox" id="receta3" class="flip-toggle" />
 
-            <div class="card-body">
-              <h5 class="card-title">Pollo a la Plancha</h5>
-              <a class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalReceta3">
-                Ver receta
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- MODAL 3 -->
-        <div class="modal fade" id="modalReceta3" tabindex="-1" aria-labelledby="modalReceta3Label" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="modalReceta3Label">Pollo a la Plancha</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            <div class="flip-card">
+              <div class="flip-front card shadow">
+                <img src="https://www.guiaderecetas.com/static/images/receta/panqueques-con-manjar.jpg"
+                  class="card-img-top img-card" alt="Panqueques con Manjar" />
+                <div class="card-body text-center">
+                  <h5 class="card-title">Panqueques con Manjar</h5>
+                </div>
+                <div class="card-footer text-center">
+                  <label for="receta3" class="btn btn-primary" role="button">
+                    Ver receta
+                  </label>
+                </div>
               </div>
 
-              <div class="modal-body">
-                <p><strong>Ingredientes:</strong></p>
-                <ul>
-                  <li>Pechuga de pollo</li>
-                  <li>Sal</li>
-                  <li>Pimienta</li>
-                  <li>Limón</li>
-                </ul>
-
-                <p><strong>Preparación:</strong></p>
-                <p>Sazonar la pechuga con las especias.</p>
-                <p>Cocinar el pollo 30 minutos, 15 por lado.</p>
+              <div class="flip-back card shadow">
+                <div class="card-body">
+                  <h4>Ingredientes</h4>
+                  <ul>
+                    <li>Harina</li>
+                    <li>Huevos</li>
+                    <li>Leche</li>
+                  </ul>
+                  <h4>Preparación</h4>
+                  <p>Mezcla, cocina y rellena.</p>
+                </div>
+                <div class="card-footer text-center">
+                  <label for="receta3" class="btn btn-secondary" role="button">Volver</label>
+                </div>
               </div>
-
-              <div class="modal-footer">
-                <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-              </div>
-
             </div>
           </div>
         </div>
 
         <!-- TARJETA 4 -->
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="card shadow-sm h-100">
-            <img
-              src="https://www.thereciperebel.com/wp-content/uploads/2019/01/instant-pot-vegetable-soup-www.thereciperebel.com-1200-3-of-3.jpg"
-              class="card-img-top img-card" alt="Receta 4" />
+          <div class="flip-card-container">
+            <input type="checkbox" id="receta4" class="flip-toggle" />
 
-            <div class="card-body">
-              <h5 class="card-title">Sopa de Verduras</h5>
-              <a class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalReceta4">
-                Ver receta
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- MODAL 4 -->
-        <div class="modal fade" id="modalReceta4" tabindex="-1" aria-labelledby="modalReceta4Label" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="modalReceta4Label">Sopa de Verduras</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            <div class="flip-card">
+              <!-- FRONT -->
+              <div class="flip-front card shadow">
+                <img src="https://damndelicious.net/wp-content/uploads/2019/04/Mexican-Street-TacosIMG_9108-1.jpg"
+                  class="card-img-top img-card" alt="Tacos de Carne" />
+                <div class="card-body text-center">
+                  <h5 class="card-title">Tacos de Carne</h5>
+                </div>
+                <div class="card-footer text-center">
+                  <label for="receta4" class="btn btn-primary" role="button">
+                    Ver receta <i class="fa-solid fa-arrow-right-long"></i>
+                  </label>
+                </div>
               </div>
 
-              <div class="modal-body">
-                <p><strong>Ingredientes:</strong></p>
-                <ul>
-                  <li>Zanahoria</li>
-                  <li>Papa</li>
-                  <li>Apio</li>
-                  <li>Caldo</li>
-                </ul>
+              <!-- BACK -->
+              <div class="flip-back card shadow">
+                <div class="card-body">
+                  <h4>Ingredientes</h4>
+                  <ul>
+                    <li>Tortillas</li>
+                    <li>Carne</li>
+                    <li>Queso</li>
+                    <li>Tomate</li>
+                  </ul>
 
-                <p><strong>Preparación:</strong></p>
-                <p>Hervir todo por 20 minutos.</p>
+                  <h4>Preparación</h4>
+                  <p>Armar los tacos y servir caliente.</p>
+                </div>
+                <div class="card-footer text-center">
+                  <label for="receta4" class="btn btn-secondary" role="button">
+                    <i class="fa-solid fa-arrow-left-long"></i> Volver
+                  </label>
+                </div>
               </div>
-
-              <div class="modal-footer">
-                <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-              </div>
-
             </div>
           </div>
         </div>
 
         <!-- TARJETA 5 -->
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="card shadow-sm h-100">
-            <img src="https://damndelicious.net/wp-content/uploads/2019/04/Mexican-Street-TacosIMG_9108-1.jpg"
-              class="card-img-top img-card" alt="Receta 5" />
+          <div class="flip-card-container">
+            <input type="checkbox" id="receta5" class="flip-toggle" />
 
-            <div class="card-body">
-              <h5 class="card-title">Tacos de Carne</h5>
-              <a class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalReceta5">
-                Ver receta
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- MODAL 5 -->
-        <div class="modal fade" id="modalReceta5" tabindex="-1" aria-labelledby="modalReceta5Label" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="modalReceta5Label">Tacos de Carne</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            <div class="flip-card">
+              <!-- FRONT -->
+              <div class="flip-front card shadow">
+                <img
+                  src="https://www.thereciperebel.com/wp-content/uploads/2019/01/instant-pot-vegetable-soup-www.thereciperebel.com-1200-3-of-3.jpg"
+                  class="card-img-top img-card" alt="Sopa de Vegetales" />
+                <div class="card-body text-center">
+                  <h5 class="card-title">Sopa de Vegetales</h5>
+                </div>
+                <div class="card-footer text-center">
+                  <label for="receta5" class="btn btn-primary" role="button">
+                    Ver receta <i class="fa-solid fa-arrow-right-long"></i>
+                  </label>
+                </div>
               </div>
 
-              <div class="modal-body">
-                <p><strong>Ingredientes:</strong></p>
-                <ul>
-                  <li>Tortillas</li>
-                  <li>Carne</li>
-                  <li>Queso</li>
-                  <li>Tomate</li>
-                </ul>
+              <!-- BACK -->
+              <div class="flip-back card shadow">
+                <div class="card-body">
+                  <h4>Ingredientes</h4>
+                  <ul>
+                    <li>Tomates</li>
+                    <li>Cebolla</li>
+                    <li>Ajo</li>
+                    <li>Caldo de verduras</li>
+                  </ul>
 
-                <p><strong>Preparación:</strong></p>
-                <p>Armar los tacos y servir caliente.</p>
+                  <h4>Preparación</h4>
+                  <p>
+                    Cocina los tomates con cebolla y ajo, licúa y añade caldo.
+                  </p>
+                </div>
+                <div class="card-footer text-center">
+                  <label for="receta5" class="btn btn-secondary" role="button">
+                    <i class="fa-solid fa-arrow-left-long"></i> Volver
+                  </label>
+                </div>
               </div>
-
-              <div class="modal-footer">
-                <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-              </div>
-
             </div>
           </div>
         </div>
 
         <!-- TARJETA 6 -->
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="card shadow-sm h-100">
-            <img src="https://www.recipetineats.com/tachyon/2020/03/Brownies_0-SQ.jpg" class="card-img-top img-card"
-              alt="Receta 6" />
-
-            <div class="card-body">
-              <h5 class="card-title">Brownies</h5>
-              <a class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalReceta6">
-                Ver receta
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- MODAL 6 -->
-        <div class="modal fade" id="modalReceta6" tabindex="-1" aria-labelledby="modalReceta6Label" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="modalReceta6Label">Brownies</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          <div class="flip-card-container">
+            <input type="checkbox" id="receta6" class="flip-toggle" />
+            <div class="flip-card">
+              <!-- FRONT -->
+              <div class="flip-front card shadow">
+                <img src="https://www.recipetineats.com/tachyon/2020/03/Brownies_0-SQ.jpg" class="card-img-top img-card"
+                  alt="Brownies de Chocolate" />
+                <div class="card-body text-center">
+                  <h5 class="card-title">Brownies de Chocolate</h5>
+                </div>
+                <div class="card-footer text-center">
+                  <label for="receta6" class="btn btn-primary" role="button">
+                    Ver receta <i class="fa-solid fa-arrow-right-long"></i>
+                  </label>
+                </div>
               </div>
 
-              <div class="modal-body">
-                <p><strong>Ingredientes:</strong></p>
-                <ul>
-                  <li>Chocolate</li>
-                  <li>Harina</li>
-                  <li>Mantequilla</li>
-                  <li>Azúcar</li>
-                </ul>
+              <!-- BACK -->
+              <div class="flip-back card shadow">
+                <div class="card-body">
+                  <h4>Ingredientes</h4>
+                  <ul>
+                    <li>200 gramos de chocolate negro</li>
+                    <li>110 gramos de mantequilla</li>
+                    <li>4 huevos</li>
+                    <li>120 gramos de azúcar</li>
+                  </ul>
 
-                <p><strong>Preparación:</strong></p>
-                <p>Mezclar todos los ingredientes.</p>
-                <p>Hornear por 25 minutos.</p>
+                  <h4>Preparación</h4>
+                  <p>Revolver todos los ingredientes, hechar en un bol y cocinar
+                    a 180° grados Celcius por 20 Min.
+                  </p>
+                </div>
+                <div class="card-footer text-center">
+                  <label for="receta6" class="btn btn-secondary" role="button">
+                    <i class="fa-solid fa-arrow-left-long"></i> Volver
+                  </label>
+                </div>
               </div>
-
-              <div class="modal-footer">
-                <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-              </div>
-
             </div>
           </div>
         </div>

@@ -1,4 +1,51 @@
-/* Fondo general con imagen */
+.flip-card-container {
+  perspective: 1000px;
+}
+
+.flip-toggle {
+  display: none;
+}
+
+.flip-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 350px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.flip-front,
+.flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+  border-radius: 0.5rem;
+}
+
+.flip-front {
+  .card-body {
+    padding-top: 2rem;
+    text-align: center;
+  }
+}
+
+.flip-back {
+  transform: rotateY(180deg);
+}
+
+.flip-toggle:checked + .flip-card {
+  transform: rotateY(180deg);
+}
+
+.img-card {
+  height: 200px;
+  object-fit: cover;
+}
+
 body {
   background-image: url("https://i.ibb.co/zVN95G9h/Chat-GPT-Image-11-dic-2025-21-30-27.png");
   background-size: cover;
@@ -7,7 +54,6 @@ body {
   position: relative;
 }
 
-/* Capa transparente con degradado */
 body::before {
   content: "";
   position: fixed;
@@ -15,14 +61,9 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-
-  /* Degradado desde transparente a blanco */
   background: linear-gradient(
-    rgba(255, 255, 255, 0.2),
-    /* Transparencia suave arriba */ rgba(255, 255, 255, 0.2)
-      /* Casi blanco abajo */
+    rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)
   );
-
   z-index: -1;
 }
 
@@ -30,17 +71,18 @@ body::before {
   text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
 }
 
+.card-img-top,
 .img-card {
-  height: 200px; /* Todas tendrán la misma altura */
-  object-fit: cover; /* Recorta sin deformar */
-  width: 100%; /* Se ajusta al ancho de la card */
-  border-radius: 8px 8px 0 0; /* Mantiene bordes bonitos */
+  height: 200px !important;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
 }
+
 .header-transparente {
   background: rgba(0, 0, 0, 0.4); /* leve fondo oscuro */
   backdrop-filter: blur(4px);      /* efecto de vidrio esmerilado */
 }
-
 
 .navbar-logo {
   height: 40px;
